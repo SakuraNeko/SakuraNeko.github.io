@@ -416,16 +416,16 @@ links:
     }
     - {
       title: 'FlyReader',
-      intro: '越飞阅读',
+      intro: '基于.NET技术构建的跨平台阅读软件',
       link: 'https://github.com/FlyReaderTeam',
       image: '/img/FRLogo.png'
     }
-    #- {
-     # title: '大贤者初春令月',
-     # intro: '',
-     # link: 'https://mourinaruto.github.io/',
-     # image: 'https://mourinaruto.github.io/img/avatar.png'
-    #}
+    - {
+      title: '大贤者初春令月',
+      intro: '项目压缩小能手',
+      link: 'https://mourinaruto.github.io/',
+      image: '/img/mourinaruto-avatar.png'
+    }
 
 
 #---------------------------
