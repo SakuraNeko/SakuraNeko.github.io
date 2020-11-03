@@ -412,13 +412,13 @@ links:
       title: 'Moespirit Studios',
       intro: '萌灵互娱',
       link: 'https://MoespiritStudios.github.io/',
-      image: 'https://avatars3.githubusercontent.com/u/29389652?s=200&v=4'
+      image: '/img/MSLogo.png'
     }
     - {
       title: 'FlyReader',
       intro: '越飞阅读',
       link: 'https://github.com/FlyReaderTeam',
-      image: 'https://avatars1.githubusercontent.com/u/62836805?s=200&v=4'
+      image: '/img/FRLogo.png'
     }
     #- {
      # title: '大贤者初春令月',
