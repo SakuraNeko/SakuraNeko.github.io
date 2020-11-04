@@ -35,7 +35,7 @@ fun_features: # 一些好玩的功能
   typing: # 为 subtitle 添加打字机效果
     enable: true
     typeSpeed: 70  # 打印速度，数字越大越慢
-    cursorChar: "_" # 游标字符
+    cursorChar: "|" # 游标字符
     loop: false # 是否循环播放效果
   anchorjs: # 为文章内容中的标题添加锚图标
     enable: true
@@ -145,10 +145,13 @@ footer:
     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
     <i class="iconfont icon-love"></i>
     <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
+    <br/>
+    Powered by 
+    <a href="https://pages.github.com/" target="_blank" rel="nofollow noopener">GitHub Pages</a>
   '  # 页脚第一行文字的 HTML，建议保留 Fluid 的链接，用于向更多人推广本主题
   statistics:  # 展示网站的 PV、UV 统计数
     enable: false
-    source: "busuanzi"  # 统计数据来源，可选：busuanzi | leancloud，使用 leancloud 需要在 web_analytics 中设置 api 参数，使用 busuanzi 注意可能间歇抽风
+    source: "busuanzi"  # 统计数据来源，可选： | leancloud，使用 leancloud 需要在 web_analytics 中设置 api 参数，使用 busuanzi 注意可能间歇抽风
     pv_format: "总访问量 {} 次"  # 显示的文本，{}是数字的占位符（必须包含)，下同
     uv_format: "总访客数 {} 人"
   beian:  # The footer of China's website policy, other areas keep disable
@@ -226,7 +229,7 @@ post:  # 部分配置同时控制自定义页面，注意备注
     collapseDepth: 0  # 层级的折叠深度，0 是全部折叠，6 是全部不折叠
   copyright:  # 版权声明
     enable: true
-    content: '本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！'
+    content: '本博客所有文章除特别声明外，均采用  <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="nofollow noopener">CC BY-NC-SA 3.0 协议</a> ，转载请注明出处！'
   prev_next:  # 文章底部上一篇下一篇功能
     enable: true
   custom:  # 文章底部自定义内容
