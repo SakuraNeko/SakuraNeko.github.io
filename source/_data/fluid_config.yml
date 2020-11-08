@@ -147,7 +147,7 @@ footer:
     <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
     <br/>
     Powered by 
-    <a href="https://pages.github.com/" target="_blank" rel="nofollow noopener">GitHub Pages</a>
+    <a href="https://pages.github.com/" target="_blank" rel="nofollow noopener"><span>GitHub Pages</span></a>
   '  # 页脚第一行文字的 HTML，建议保留 Fluid 的链接，用于向更多人推广本主题
   statistics:  # 展示网站的 PV、UV 统计数
     enable: false
