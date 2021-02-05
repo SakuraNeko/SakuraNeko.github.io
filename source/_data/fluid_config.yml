@@ -419,7 +419,7 @@ links:
     - {
       title: 'FlyReader',
       intro: '基于.NET技术构建的跨平台阅读软件',
-      link: 'https://github.com/FlyReaderTeam',
+      link: 'https://github.com/FlyReader',
       image: '/img/FRLogo.png'
     }
     - {
