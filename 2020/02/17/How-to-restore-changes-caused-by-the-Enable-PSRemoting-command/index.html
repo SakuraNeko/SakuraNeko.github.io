@@ -1,0 +1,588 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="SakuraNeko">
+  <meta name="keywords" content="">
+  <title>如何还原Enable-PSRemoting命令造成的更改？ - 落樱缤纷</title>
+  <script src="https://cdn.jsdelivr.net/gh/SakuraNeko/live2d-widget@latest/autoload.js"></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+    
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body>
+  <header style="height: 50vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>落樱缤纷</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-02-17 20:00" pubdate>
+        2020年2月17日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.3k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      15
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">如何还原Enable-PSRemoting命令造成的更改？</h1>
+            
+            <div class="markdown-body" id="post-body">
+              <p><strong>关键词：</strong> 运维、Windows、安全配置</p>
+<p><strong>授权协议：</strong> <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/3.0/">CC BY-NC-SA 3.0</a>，转载请标注来源</p>
+<hr>
+<p><img src="banner.png" srcset="/img/loading.gif" alt="题图"></p>
+<p><strong>案例OS版本：</strong> Windows 10 1909 Pro Workstation（10.0.18363.0）</p>
+<p><strong>可用OS版本：</strong> Windows Server 2008 R2（Windows 7）+</p>
+<p><strong>不同OS版本操作可能有些许差异。</strong></p>
+<p>这个事件起源于一次对Hyper-V的远程调试……</p>
+<p>当你需要访问一个位于内网上的Hyper-V服务器的时候，这条命令（Enable-PSRemoting）将会是你必须输入的内容。但在有些时候，“用完的东西必须归位”也是系统调试者需要遵守的重要法则。</p>
+<p>遵循着这样的法则，Neko输入了应该正常关闭PowerShell Remoting的指令：</p>
+<pre><code class="hljs PowerShell"><span class="hljs-built_in">Disable-PSRemoting</span></code></pre>
+<p>然后收到了PowerShell这样的“回答”：</p>
+<pre><code class="hljs PowerShell">WARNING: PowerShell remoting has been disabled only <span class="hljs-keyword">for</span> PowerShell <span class="hljs-number">6</span>+ configurations and does not affect
+ Windows PowerShell remoting configurations. Run this cmdlet <span class="hljs-keyword">in</span> Windows PowerShell to affect all PowerShell
+ remoting configurations.
+
+WARNING: Disabling the session configurations does not undo all the changes made by the <span class="hljs-built_in">Enable-PSRemoting</span>
+ or <span class="hljs-built_in">Enable-PSSessionConfiguration</span> cmdlet. You might have to manually undo the changes by following these steps:
+    <span class="hljs-number">1</span>. Stop and disable the WinRM service.
+    <span class="hljs-number">2</span>. Delete the listener that accepts requests on any IP address.
+    <span class="hljs-number">3</span>. Disable the firewall exceptions <span class="hljs-keyword">for</span> WS<span class="hljs-literal">-Management</span> communications.
+    <span class="hljs-number">4</span>. Restore the value of the LocalAccountTokenFilterPolicy to <span class="hljs-number">0</span>, which restricts remote access to
+       members of the Administrators <span class="hljs-built_in">group</span> on the computer.</code></pre>
+<p>是的，这条指令<strong>并不能</strong>达到“关闭 PowerShell Remoting”的 <strong>“真实”</strong>。它还需我们手动做四件事：</p>
+<ol>
+<li>停止并禁用 WinRM（Windows Remote Management） 服务；</li>
+<li>删除接受任何 IP 地址请求的侦听器；</li>
+<li>禁用 “Windows 管理”通过Windows防火墙进行通讯；</li>
+<li>将“本地帐户令牌筛选器”策略的值还原为 0，从而限制对计算机上的管理员组的成员；</li>
+</ol>
+<p><strong>但……</strong></p>
+<p>如果你按照微软给出的建议来行事，多半会迷失在错综复杂的WIndows调试菜单中，还会被其埋下的暗坑绊得狗啃泥。</p>
+<hr>
+<p><strong>那有没有能解决这个问题的方法呢？</strong></p>
+<p>当然有！因为……Neko已经帮你踩过了！</p>
+<p>首先，我们需要改变一下行事的顺序：<strong>将第一件事和第二件事倒过来做。</strong></p>
+<p>否则，你将会得到OS给你的大礼包：</p>
+<pre><code class="hljs PowerShell">WSManFault
+    Message = 客户端无法连接到请求中指定的目标。 请验证该目标上的服务是否正在运行以及是否正在接受请求。 有关目标(通常是 IIS 或 WinRM)上运行的 WS 管理服务，请查阅日志和文档。 如果目标是 WinRM 服务，则在目标上运行以下命令来分析和配置 WinRM 服务: <span class="hljs-string">&quot;winrm quickconfig&quot;</span>。
+
+错误编号: <span class="hljs-literal">-2144108526</span> <span class="hljs-number">0</span>x80338012
+客户端无法连接到请求中指定的目标。 请验证该目标上的服务是否正在运行以及是否正在接受请求。 有关目标(通常是 IIS 或 WinRM) 上运行的 WS 管理服务，请查阅日志和文档。 如果目标是 WinRM 服务，则在目标上运行以下命令来分析和配置 WinRM 服务: <span class="hljs-string">&quot;winrm quickconfig&quot;</span>。</code></pre>
+<p>是的，关闭的服务（程序）不能帮你完成任务。</p>
+<blockquote>
+<p>Windows真香定律1：没有人能让不存在的东西为其行事，你也不例外</p>
+</blockquote>
+<p>所以，我们要先做第二件事：删除接受任何 IP 地址请求的侦听器。</p>
+<p>首先，输入以下指令删除监听器：</p>
+<pre><code class="hljs PowerShell">winrm delete winrm/config/listener?address=*+transport=HTTP</code></pre>
+<p>再用下面的指令检查一下是不是删光了：</p>
+<pre><code class="hljs PowerShell">winrm enumerate winrm/config/listener</code></pre>
+<p>这时候，我们才可以去关闭WinRM服务。</p>
+<hr>
+<p>现在我们可以开始做“第一件事”了：<br><br>    停止并禁用 WinRM（Windows Remote Management） 服务</p>
+<p>关闭服务的时候要注意 <strong>“停止并关闭”</strong>，以免意外重启造成不必要的麻烦。</p>
+<p><img src="WRM-Mang.png" srcset="/img/loading.gif" alt=" "></p>
+<blockquote>
+<p>按图设置，务必一致</p>
+</blockquote>
+<blockquote>
+<p>Windows真香定律2：完事记得要补刀，否则事后必被坑</p>
+</blockquote>
+<p>那么接下来，<br><br><strong>第三件事</strong>（禁用 “Windows 管理”通过Windows防火墙进行通讯）要如何处理呢？</p>
+<p>首先在搜索中输入“防火墙”，然后选择结果中的“检查防火墙状态”；</p>
+<p><img src="S-FW.png" srcset="/img/loading.gif" alt=" "></p>
+<p>然后在弹出的窗口左边的菜单栏中选择：</p>
+<p><img src="Choose-App-T-Win-FW.png" srcset="/img/loading.gif" alt=" "></p>
+<blockquote>
+<p>注意别点错</p>
+</blockquote>
+<p>这时候选中右上角的“更改设置”，下面的窗口中的项目才能正常操作；</p>
+<p>按图去除复选框内√即可</p>
+<p><img src="Change-FW-Setting.png" srcset="/img/loading.gif" alt=" "></p>
+<p>最后别忘了点确定保存更改；</p>
+<hr>
+<p>现在我们到了<strong>最后一步</strong>：<br><br>将“本地帐户令牌筛选器”策略的值还原为 0，从而限制对计算机上的管理员组的成员。</p>
+<p>这一步涉及到修改注册表（组策略），但萌新操作绝对会把注册表改坏：</p>
+<p>所以，请直接将下面的东西内容复制到PowerShell内操作吧！</p>
+<pre><code class="hljs PowerShell"><span class="hljs-built_in">Set-ItemProperty</span> <span class="hljs-literal">-Path</span> HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System <span class="hljs-literal">-Name</span> LocalAccountTokenFilterPolicy <span class="hljs-literal">-Value</span> <span class="hljs-number">0</span> <span class="hljs-literal">-Type</span> DWord</code></pre>
+
+<p>到这里，一切就大功告成了！</p>
+<hr>
+<p>下面的部分是本次内容的进阶篇，</p>
+<p>如果有兴趣，可自行前往相关页面看看：</p>
+<p>​<a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/windows/win32/winrm/portal">Windows Remote Management | Microsoft Docs</a></p>
+<p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/disable-psremoting?view=powershell-7">Disable-PSRemoting | Microsoft Docs</a></p>
+<p><a target="_blank" rel="noopener" href="https://social.technet.microsoft.com/Forums/windows/en-US/6fd8b3a7-1e0d-46a1-a6ed-11c4a7d8bed4/localaccounttokenfilterpolicy">LocalAccountTokenFilterPolicy |  Microsoft Technet</a></p>
+<hr>
+<p><img src="%E7%8C%AB%EF%BC%88By%EF%BC%9A%E3%81%8B%E3%81%88%E3%82%8B%E3%81%AE%E3%81%93%EF%BC%89.jpg" srcset="/img/loading.gif" alt="猫 （By：かえるのこ） | Twitter：@_Yakan2gou"></p>
+<blockquote>
+<p>猫 （By：かえるのこ） | Twitter：@_Yakan2gou</p>
+</blockquote>
+<p><strong>本文以<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/3.0/">CC BY-NC-SA 3.0</a>协议发布，转载请标注来源。</strong></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E8%BF%90%E7%BB%B4/">运维</a>
+                    
+                      <a class="hover-with-bg" href="/categories/%E8%BF%90%E7%BB%B4/%E5%AE%89%E5%85%A8%E9%85%8D%E7%BD%AE/">安全配置</a>
+                    
+                      <a class="hover-with-bg" href="/categories/Windows/">Windows</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Windows/">Windows</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E8%BF%90%E7%BB%B4/">运维</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%AE%89%E5%85%A8%E9%85%8D%E7%BD%AE/">安全配置</a>
+                    
+                      <a class="hover-with-bg" href="/tags/PowerShell/">PowerShell</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用  <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="nofollow noopener noopener">CC BY-NC-SA 3.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/02/29/How-to-get-an-old-version-of-Unity-download-link-inside-UnityHub/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">如何取得UnityHub内旧版本Unity下载链接</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/01/18/A-Simple-Tutorial-for-UnrealEngine-4-Project-Version-Management/">
+                        <span class="hidden-mobile">连猫都能看懂的虚幻4版本管理教程</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <br/> Powered by  <a href="https://pages.github.com/" target="_blank" rel="nofollow noopener"><span>GitHub Pages</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "如何还原Enable-PSRemoting命令造成的更改？&nbsp;",
+      ],
+      cursorChar: "|",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
