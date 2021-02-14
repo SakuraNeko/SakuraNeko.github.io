@@ -3,7 +3,6 @@ title: 如何还原Enable-PSRemoting命令造成的更改？
 date: 2020-02-17 20:00:00
 categories:
 - [运维, 安全配置]
-- [Windows]
 tags: 
 - Windows
 - 运维

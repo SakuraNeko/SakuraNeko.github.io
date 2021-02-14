@@ -2,8 +2,6 @@
 title: 连猫都能看懂的虚幻4版本管理教程
 date: 2020-1-19 01:19:36
 categories:
-- [技术, Unreal Engine]
-- [技术, Version Control, Git]
 - [猫都能看懂的游戏开发教程]
 tags:
 - 技术
