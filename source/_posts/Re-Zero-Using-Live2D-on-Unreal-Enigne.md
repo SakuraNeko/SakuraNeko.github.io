@@ -229,7 +229,7 @@ CubismNativeFramework的下载地址为：
 
 #### 完成效果：
 
-<iframe src="//player.bilibili.com/player.html?aid=83601494&bvid=BV1TJ411n7dN&cid=143018535&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe src="//player.bilibili.com/player.html?aid=83601494&bvid=BV1TJ411n7dN&cid=143018535&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width: 100%; max-width: 100%；height: 500px; align:center;"> </iframe>
 
 >Unreal Cross Live2D！
 ​
