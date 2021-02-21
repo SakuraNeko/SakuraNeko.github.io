@@ -17,7 +17,7 @@ tags:
 
 **也可能因为引擎开发商政策修改导致方法失效。**
 
-**目前最新非测试版本为Unity 2020.1.8（2020/11/4）。**
+**目前最新非测试版本为Unity 2020.2.5（2021/2/19）。**
 
 ----
 
@@ -75,14 +75,30 @@ tags:
 
 #### 1、请在下表中找到你需要的引擎版本，然后复制它；
 
-##### Unity 2020.2（Beta）：
+##### Unity 2021.1(Beta):
 ```
-unityhub://2020.2.0b9/ef2968fa77ae
+unityhub://2021.1.0b7/02180fe17a0e
+```
+##### Unity 2020.2：
+```
+unityhub://2020.2.5f1/e2c53f129de5
+unityhub://2020.2.4f1/becced5a802b
+unityhub://2020.2.3f1/8ff31bc5bf5b
+unityhub://2020.2.2f1/068178b99f32
+unityhub://2020.2.1f1/270dd8c3da1c
+unityhub://2020.2.0f1/3721df5a8b28
 ```
 ##### Unity 2020.1：
 ```
+unityhub://2020.1.17f1/9957aee8edc2
+unityhub://2020.1.16f1/f483ad6465d6
+unityhub://2020.1.15f1/97d0ae02d19d
+unityhub://2020.1.14f1/d81f64f5201d
+unityhub://2020.1.13f1/5e24f28bfbc0
+unityhub://2020.1.12f1/55b56f0a86e3
 unityhub://2020.1.11f1/698c1113cef0
 unityhub://2020.1.10f1/974a9d56f159
+
 unityhub://2020.1.9f1/145f5172610f
 unityhub://2020.1.8f1/22e8c0b0c3ec
 unityhub://2020.1.7f1/064ffcdb64ad
@@ -96,10 +112,19 @@ unityhub://2020.1.0f1/2ab9c4179772
 ```
 ##### Unity 2019.4（LTS）：
 ```
+unityhub://2019.4.20f1/6dd1c08eedfa
+
+unityhub://2019.4.19f1/ca5b14067cec
+unityhub://2019.4.18f1/3310a4d4f880
+unityhub://2019.4.17f1/667c8606c536
+unityhub://2019.4.16f1/e05b6e02d63e
+unityhub://2019.4.15f1/fbf367ac14e9
+unityhub://2019.4.14f1/4037e52648cd
 unityhub://2019.4.13f1/518737b1de84
 unityhub://2019.4.12f1/225e826a680e
 unityhub://2019.4.11f1/2d9804dddde7
 unityhub://2019.4.10f1/5311b3af6f69
+
 unityhub://2019.4.9f1/50fe8a171dd9
 unityhub://2019.4.8f1/60781d942082
 unityhub://2019.4.7f1/e992b1a16e65
@@ -118,8 +143,8 @@ unityhub://2019.3.14f1/2b330bf6d2d8
 unityhub://2019.3.13f1/d4ddf0d95db9
 unityhub://2019.3.12f1/84b23722532d
 unityhub://2019.3.11f1/ceef2d848e70
-
 unityhub://2019.3.10f1/5968d7f82152
+
 unityhub://2019.3.9f1/e6e740a1c473
 unityhub://2019.3.8f1/4ba98e9386ed
 unityhub://2019.3.8f1/4ba98e9386ed
@@ -180,6 +205,11 @@ unityhub://2019.1.0f2/292b93d75a2c
 ```
 ##### Unity 2018.4 (LTS) ：
 ```
+unityhub://2018.4.32f1/fba45da84107
+unityhub://2018.4.31f1/212ea663d844
+unityhub://2018.4.30f1/c698a062d8e6
+
+unityhub://2018.4.29f1/50cce2edf27f
 unityhub://2018.4.28f1/a2d4f71491a4
 unityhub://2018.4.27f1/4e283b7d3f88
 unityhub://2018.4.26f1/a7ac1c6396db
@@ -274,6 +304,7 @@ unityhub://2018.1.0f2/d4d99f31acba
 ##### Unity 2017.4 (LTS) ：
 ```
 unityhub://2017.4.40f1/6e14067f8a9a
+
 unityhub://2017.4.39f1/947131c5be7e
 unityhub://2017.4.38f1/82ac2fb100ce
 unityhub://2017.4.37f1/78b69503ebc4
