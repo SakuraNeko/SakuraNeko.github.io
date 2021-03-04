@@ -12,6 +12,8 @@ layout: about
 - 万能的世界观锻造机，中国最屑游戏原案（自称）
 - 猫娘
 
+<iframe src="https://www.worldcommunitygrid.org/getDynamicImage.do?memberName=catelf&mnOn=true&stat=1&imageNum=1&rankOn=false&projectsOn=true&special=true&link=0&memberId=943027" frameborder="0" name="di" scrolling="no" width="405px" height="190px"></iframe>
+
 ## 职业经历
 
 - 2019-至今 **Moespirit Tech · 数字娱乐事业总监；Moespirit Studios · CEO**
