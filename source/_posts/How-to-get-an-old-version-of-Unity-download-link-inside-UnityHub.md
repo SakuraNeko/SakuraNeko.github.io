@@ -17,7 +17,9 @@ tags:
 
 **也可能因为引擎开发商政策修改导致方法失效。**
 
-**目前最新非测试版本为Unity 2020.3.2（2021/3/30）。**
+**目前最新非测试版本为Unity 2021.1.13（2021/6/30）。**
+
+**目前最新长期支持版本为Unity 2020.3.13（2021/6/30）。**
 
 ----
 
@@ -75,16 +77,41 @@ tags:
 
 #### 1、请在下表中找到你需要的引擎版本，然后复制它；
 
-##### Unity 2021.2（α）：
+##### Unity 2021.2（β）：
 ```
-unityhub://2021.2.0a10/b8c2bb7e8b36
+unityhub://2021.2.0b2/d86242d513ba
 ```
 ##### Unity 2021.1：
 ```
+unityhub://2021.1.13f1/a03098edbbe0
+unityhub://2021.1.12f1/afcadd793de6
+unityhub://2021.1.11f1/4d8c25f7477e
+unityhub://2021.1.10f1/b15f561b2cef
+
+unityhub://2021.1.9f1/7a790e367ab3
+unityhub://2021.1.7f1/d91830b65d9b
+unityhub://2021.1.6f1/c0fade0cc7e9
+unityhub://2021.1.5f1/3737af19df53
+unityhub://2021.1.4f1/4cd64a618c1b
+unityhub://2021.1.3f1/4bef613afd59
+unityhub://2021.1.2f1/e5d502d80fbb
+unityhub://2021.1.1f1/6fdc41dfa55a
 unityhub://2021.1.0f1/61a549675243
 ```
 ##### Unity 2020.3：
 ```
+unityhub://2020.3.13f1/71691879b7f5
+unityhub://2020.3.12f1/b3b2c6512326
+unityhub://2020.3.11f1/99c7afb366b3
+unityhub://2020.3.10f1/297d780c91bc
+
+unityhub://2020.3.9f1/108be757e447
+unityhub://2020.3.8f1/507919d4fff5
+unityhub://2020.3.7f1/dd97f2c94397
+unityhub://2020.3.6f1/338bb68529b2
+unityhub://2020.3.5f1/8095aa901b9b
+unityhub://2020.3.4f1/0abb6314276a
+unityhub://2020.3.3f1/76626098c1c4
 unityhub://2020.3.2f1/8fd9074bf66c
 unityhub://2020.3.1f1/77a89f25062f
 unityhub://2020.3.0f1/c7b5465681fb
@@ -122,6 +149,14 @@ unityhub://2020.1.0f1/2ab9c4179772
 ```
 ##### Unity 2019.4（LTS）：
 ```
+unityhub://2019.4.28f1/1381962e9d08
+unityhub://2019.4.27f1/23dc10685eb4
+unityhub://2019.4.26f1/e0392c6b2363
+unityhub://2019.4.25f1/01a0494af254
+unityhub://2019.4.24f1/5da6f0345e82
+unityhub://2019.4.23f1/3f4e01f1a5ec
+unityhub://2019.4.22f1/9fdda2fe27ad
+unityhub://2019.4.21f1/b76dac84db26
 unityhub://2019.4.20f1/6dd1c08eedfa
 
 unityhub://2019.4.19f1/ca5b14067cec
@@ -215,6 +250,10 @@ unityhub://2019.1.0f2/292b93d75a2c
 ```
 ##### Unity 2018.4 (LTS) ：
 ```
+unityhub://2018.4.36f1/6cd387d23174
+unityhub://2018.4.35f1/dbb5675dce2d
+unityhub://2018.4.34f1/ae2afac172fb
+unityhub://2018.4.33f1/d75f7e9df24c
 unityhub://2018.4.32f1/fba45da84107
 unityhub://2018.4.31f1/212ea663d844
 unityhub://2018.4.30f1/c698a062d8e6
