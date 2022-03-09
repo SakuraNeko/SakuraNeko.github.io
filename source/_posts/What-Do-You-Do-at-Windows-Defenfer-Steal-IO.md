@@ -65,7 +65,7 @@ Microsoft Defender前身为Windows Defender，是微软改名部的又一力作�
 
 ### 具体的步骤如下：
 
-1. 点击托盘区域的小盾牌打开Windows安全中心；
+1. 点击托盘区域的小盾牌打开 [Windows 安全中心](windowsdefender://)；
 2. 单击“病毒和威胁防护”，在打开的页面点击“病毒和威胁防护设置”；
 3. 滚动滚轮直到看见“排除项”然后点击“添加或删除排除项”；
 4. 将需要的项目添加进去即可；
@@ -78,7 +78,11 @@ Microsoft Defender前身为Windows Defender，是微软改名部的又一力作�
 
 之后设备处理效率就会恢复了。
 
-## 推荐一个神奇的小网站：
+### 参考
+
+1. [添加 Windows Defender 例外以加快 Android 生成性能 - Microsoft Docs](https://docs.microsoft.com/zh-cn/windows/android/defender-settings)
+
+## 推荐一个神奇的小网站
 
 **[中国珂学院](https://www.chtholly.ac.cn/)**
 
