@@ -2,7 +2,7 @@
 title: Hyper-V虚拟机虚拟磁盘文件越用越大怎么办？
 date: 2022-7-6 21:30:22
 categories:
-- [运维，优化]
+- [运维, 优化]
 tags:
 - 技术
 - Hyper-V
