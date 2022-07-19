@@ -1,0 +1,640 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="SakuraNeko">
+  <meta name="keywords" content="">
+  <title>使用命令行全新安装Windows操作系统（附文件备份教程） - 落樱缤纷</title>
+  <script src="https://cdn.jsdelivr.net/gh/SakuraNeko/live2d-widget@latest/autoload.js"></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+    
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body>
+  <header style="height: 50vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>落樱缤纷</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-06-15 21:30" pubdate>
+        2022年6月15日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.1k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      24
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">使用命令行全新安装Windows操作系统（附文件备份教程）</h1>
+            
+            <div class="markdown-body" id="post-body">
+              <p><strong>关键词：</strong> 运维、Windows、装机</p>
+<p><strong>授权协议：</strong> <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/3.0/">CC BY-NC-SA 3.0</a>，转载请标注来源</p>
+<hr>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>操作系统安装是每个专业计算机使用者应该学会的必备技能。</p>
+<p>某些特殊情况下，我们可能无法使用图形化界面在新的驱动器上部署Windows操作系统，这时候使用命令行则成为了可选的方式。本文是笔者为整理在虚拟驱动器上部署Windows操作系统所写，其的步骤和方式在裸机上同样可用。</p>
+<p><strong>注意：如果需要进行文件备份，可以先看补充部分再看步骤部分。</strong></p>
+<hr>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="第零阶段：预先准备"><a href="#第零阶段：预先准备" class="headerlink" title="第零阶段：预先准备"></a>第零阶段：预先准备</h3><p>首先，请准备好 Windows 安装镜像（通常为 ISO 格式的光盘镜像文件），你可以在微软官网上下载 Media Create Tool 制作或在官网上直接下载镜像文件。</p>
+<p>下面是官方的镜像和工具的下载页面：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.microsoft.com/en-us/software-download/windows10">Windows 10</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.microsoft.com/en-us/software-download/windows11">Windows 11</a></li>
+</ul>
+<p>笔者不推荐使用来自于其他网站的非官方镜像版本（除非来源经过了适当的审查以确保安全）。</p>
+<p>使用例如 Rufus 一类的驱动磁盘制作软件在其他计算机上制作好所需的启动U盘，并提前查询需要维护的计算机所需的启动项选择快捷键就可以开始进行裸机安装程序了。</p>
+<ul>
+<li>下载 <a target="_blank" rel="noopener" href="https://rufus.ie/">Rufus</a></li>
+</ul>
+<p>如果手工制作启动U盘请注意使用 FAT32 格式作为文件系统格式。</p>
+<p>如遇到 FAT32 最大文件限制可使用 DISM 工具将镜像分块：</p>
+<pre><code class="hljs css"><span class="hljs-selector-tag">Dism</span> /<span class="hljs-selector-tag">Split-Image</span> /<span class="hljs-selector-tag">ImageFile</span><span class="hljs-selector-pseudo">:D</span>:\<span class="hljs-selector-tag">sources</span>\<span class="hljs-selector-tag">install</span><span class="hljs-selector-class">.wim</span> /<span class="hljs-selector-tag">SWMFile</span><span class="hljs-selector-pseudo">:D</span>:\<span class="hljs-selector-tag">sources</span>\<span class="hljs-selector-tag">install</span><span class="hljs-selector-class">.swm</span> /<span class="hljs-selector-tag">FileSize</span><span class="hljs-selector-pseudo">:4096</span></code></pre>
+<blockquote>
+<p>路径中的分卷号请按照实际情况予以更换。</p>
+</blockquote>
+<p>关闭需要维护的计算机，并断开不需要操作的其他驱动器的硬件接口（可选步骤）。并连接上准备好的U盘。</p>
+<p>多次尝试，直到能进入 Windows RE 恢复环境</p>
+<p>在使用正确方式启动后，你应该可以看到 Windows RE 环境，这是微软为部署和维护 Windows 操作系统设计的最小化启动环境。然后在高级设置中选择使用使用命令行工具进行维护。</p>
+<p>如果步骤正确，你将看到 CMD 工具的字符窗口。</p>
+<p>接下来我们将正式进入到裸机安装步骤。</p>
+<p>请被操作的设备内重要的资料文件已经得到妥善的备份，该操作将彻底彻底设备上的一切文件和信息。</p>
+<hr>
+<h3 id="第一阶段：使用-Diskpart-工具对磁盘进行适当的处置"><a href="#第一阶段：使用-Diskpart-工具对磁盘进行适当的处置" class="headerlink" title="第一阶段：使用 Diskpart 工具对磁盘进行适当的处置"></a>第一阶段：使用 Diskpart 工具对磁盘进行适当的处置</h3><p>首先，我们需要使用 Diskpart 工具对磁盘进行适当的处置，以保证我们可以在后续的步骤中正确的安装操作系统。</p>
+<p>其全部命令如下（可以拷贝作为脚本）：</p>
+<pre><code class="hljs routeros">diskpart
+list disk
+select diek 0
+convert gpt
+create partition efi <span class="hljs-attribute">size</span>=260
+format quick <span class="hljs-attribute">fs</span>=fat32 <span class="hljs-attribute">label</span>=<span class="hljs-string">&quot;System&quot;</span>
+assign <span class="hljs-attribute">letter</span>=<span class="hljs-string">&quot;S&quot;</span>
+create partition msr <span class="hljs-attribute">size</span>=16
+create partition primary
+shrink <span class="hljs-attribute">minimum</span>=1260
+gpt <span class="hljs-attribute">attributes</span>=0x0000000000000000
+format quick <span class="hljs-attribute">fs</span>=ntfs <span class="hljs-attribute">label</span>=<span class="hljs-string">&quot;Windows OS&quot;</span>
+assign <span class="hljs-attribute">letter</span>=<span class="hljs-string">&quot;W&quot;</span>
+create partition primary <span class="hljs-attribute">size</span>=1260
+<span class="hljs-builtin-name">set</span> <span class="hljs-attribute">id</span>=DE94BBA4-06D1-4D40-A16A-BFD50179D6AC
+gpt <span class="hljs-attribute">attributes</span>=0x8000000000000001
+format quick <span class="hljs-attribute">fs</span>=ntfs <span class="hljs-attribute">label</span>=<span class="hljs-string">&quot;Recovery&quot;</span>
+assign <span class="hljs-attribute">letter</span>=<span class="hljs-string">&quot;R&quot;</span>
+rescan
+exit</code></pre>
+
+<p>下面我们进行每一步骤的解释说明：</p>
+<ol>
+<li>启用 Diskpart 工具：<pre><code class="hljs ebnf"><span class="hljs-attribute">diskpart</span></code></pre></li>
+<li>列出设备上的全部驱动器：<pre><code class="hljs ebnf"><span class="hljs-attribute">list disk</span></code></pre></li>
+<li>选择需要操作的驱动器：<pre><code class="hljs perl"><span class="hljs-keyword">select</span> diek <span class="hljs-number">0</span></code></pre>
+<blockquote>
+<p>注意：请根据列出的驱动器来选择需要处理的驱动器，可通过名称、容量来确定所应该操作的驱动器。</p>
+</blockquote>
+</li>
+<li>将被选择的驱动器引导方式转换为 GPT 方式：<pre><code class="hljs dos"><span class="hljs-built_in">convert</span> gpt</code></pre>
+<blockquote>
+<p>在大多数现代（2013年后生产）计算机上，已默认使用UEFI+GPT形式的组合来作为引导机制。</p>
+</blockquote>
+</li>
+<li>创建用于 UEFI 引导的 EFI 分区：<pre><code class="hljs sql"><span class="hljs-keyword">create</span> <span class="hljs-keyword">partition</span> efi <span class="hljs-keyword">size</span>=<span class="hljs-number">260</span></code></pre></li>
+<li>转换该分区文件系统格式为 FAT32 ，并添加卷标“System”：<pre><code class="hljs routeros">format quick <span class="hljs-attribute">fs</span>=fat32 <span class="hljs-attribute">label</span>=<span class="hljs-string">&quot;System&quot;</span></code></pre></li>
+<li>注册该分区的分区号为S：<pre><code class="hljs autoit"><span class="hljs-built_in">assign</span> letter=<span class="hljs-string">&quot;S&quot;</span></code></pre></li>
+<li>创建 MSR 分区：<pre><code class="hljs sql"><span class="hljs-keyword">create</span> <span class="hljs-keyword">partition</span> msr <span class="hljs-keyword">size</span>=<span class="hljs-number">16</span></code></pre>
+<blockquote>
+<p>该 MSR 分区是用于操作系统后期执行例如 Bitlocker 等可能变更分区所需要的操作预留的。</p>
+</blockquote>
+</li>
+<li>使用剩下的全部磁盘空间创建一个分区：<pre><code class="hljs n1ql"><span class="hljs-keyword">create</span> <span class="hljs-keyword">partition</span> <span class="hljs-keyword">primary</span></code></pre></li>
+<li>收缩之前的分区，为回复分区创建预留空间：<pre><code class="hljs routeros">shrink <span class="hljs-attribute">minimum</span>=1260</code></pre>
+<blockquote>
+<p>按照微软的解释，恢复分区需要至少650MB以上的空间，但为了之后的升级扩展，本文设定为1260MB。</p>
+</blockquote>
+</li>
+<li>设定该分区为可读写的GPT分区：<br>gpt attributes=0x0000000000000000</li>
+<li>转换该分区文件系统格式为NTFS，并添加卷标“Windows OS”：<pre><code class="hljs routeros">format quick <span class="hljs-attribute">fs</span>=ntfs <span class="hljs-attribute">label</span>=<span class="hljs-string">&quot;Windows OS&quot;</span></code></pre></li>
+<li>注册该分区的分区号为W：<pre><code class="hljs autoit"><span class="hljs-built_in">assign</span> letter=<span class="hljs-string">&quot;W&quot;</span></code></pre></li>
+<li>创建 Windows RE 分区：<pre><code class="hljs n1ql"><span class="hljs-keyword">create</span> <span class="hljs-keyword">partition</span> <span class="hljs-keyword">primary</span> size=<span class="hljs-number">1260</span></code></pre></li>
+<li>设定恢复分区所需的ID：<pre><code class="hljs apache"><span class="hljs-attribute">set</span> id=DE<span class="hljs-number">94</span>BBA<span class="hljs-number">4</span>-<span class="hljs-number">06</span>D<span class="hljs-number">1</span>-<span class="hljs-number">4</span>D<span class="hljs-number">40</span>-A<span class="hljs-number">16</span>A-BFD<span class="hljs-number">50179</span>D<span class="hljs-number">6</span>AC</code></pre>
+<blockquote>
+<p>微软文档指出：恢复分区必须使用“DE94BBA4-06D1-4D40-A16A-BFD50179D6AC”作为ID。</p>
+</blockquote>
+</li>
+<li>设定改分区为受保护分区（防止误操作损坏恢复工具）：<pre><code class="hljs apache"><span class="hljs-attribute">gpt</span> attributes=<span class="hljs-number">0</span>x<span class="hljs-number">8000000000000001</span></code></pre></li>
+<li>转换该分区文件系统格式为 NTFS ，并添加卷标“Recovery”：<pre><code class="hljs routeros">format quick <span class="hljs-attribute">fs</span>=ntfs <span class="hljs-attribute">label</span>=<span class="hljs-string">&quot;Recovery&quot;</span></code></pre></li>
+<li>注册该分区的分区号为R：<pre><code class="hljs autoit"><span class="hljs-built_in">assign</span> letter=<span class="hljs-string">&quot;R&quot;</span></code></pre></li>
+<li>验证该驱动器分配操作是否存在问题：<pre><code class="hljs ebnf"><span class="hljs-attribute">rescan</span></code></pre></li>
+<li>退出Diskpart工具：<pre><code class="hljs awk"><span class="hljs-keyword">exit</span></code></pre>
+至此，驱动器分区的工作全部完成。</li>
+</ol>
+<hr>
+<h3 id="第二阶段：使用Dism工具将操作系统从镜像部署到所需分区上"><a href="#第二阶段：使用Dism工具将操作系统从镜像部署到所需分区上" class="headerlink" title="第二阶段：使用Dism工具将操作系统从镜像部署到所需分区上"></a>第二阶段：使用Dism工具将操作系统从镜像部署到所需分区上</h3><p>首先，请通过以下命令确认你的操作系统镜像所在位置和镜像信息。</p>
+<p>镜像位置一般位于你接入的可移动驱动器上，将下文命令内的盘符D替换成你可移动驱动器的盘符。</p>
+<pre><code class="hljs dsconfig"><span class="hljs-string">dism</span> /<span class="hljs-built_in">get-imageinfo</span> /<span class="hljs-string">imagefile:D:</span>\<span class="hljs-string">sources</span>\<span class="hljs-string">install</span>.<span class="hljs-string">wim</span></code></pre>
+<blockquote>
+<p>注意：如果你的镜像格式为esd/swm格式，请将命令中的wim替换为esd/swm即可。</p>
+</blockquote>
+<p>然后，根据提示的信息，确定你所需的操作系统镜像序号，并填写到下面的指令内（本案例为序号4）。</p>
+<pre><code class="hljs groovy">dism <span class="hljs-regexp">/apply-image /</span><span class="hljs-attr">imagefile:</span><span class="hljs-attr">D:</span>\sources\install.esd <span class="hljs-regexp">/index:4 /</span><span class="hljs-attr">applydir:</span><span class="hljs-attr">W:</span></code></pre>
+<blockquote>
+<p>注意：applydir参数为系统安装的释放路径。</p>
+</blockquote>
+<p>最后，在之前步骤完成后，通过bcdboot命令设定操作系统的启动配置参数。</p>
+<pre><code class="hljs armasm"><span class="hljs-symbol">bcdboot</span> W:\windows /l zh-<span class="hljs-meta">cn</span></code></pre>
+<blockquote>
+<p>注意：l参数为操作系统语言，请按照你的镜像上的语言进行填写。</p>
+</blockquote>
+<p>至此，操作系统已经部署完毕了。</p>
+<hr>
+<h3 id="第三阶段：部署和注册操作系统恢复工具（Windows-RE-Tools）"><a href="#第三阶段：部署和注册操作系统恢复工具（Windows-RE-Tools）" class="headerlink" title="第三阶段：部署和注册操作系统恢复工具（Windows RE Tools）"></a>第三阶段：部署和注册操作系统恢复工具（Windows RE Tools）</h3><p>微软为了保证在操作系统因为故障而无法启动时，用户能通过备份或其他方式恢复自己的数据所以在设备内一般会装在 Windows RE 分区，我们现在需要人工为该设备装载 Windows RE 设施并注册。</p>
+<p>首先，我们创建对应的目录：</p>
+<pre><code class="hljs taggerscript">mkdir R:<span class="hljs-symbol">\R</span>ecovery<span class="hljs-symbol">\W</span>indowsRE</code></pre>
+<p>随后，使用 xcopy 工具将 Windows RE 所需的文件复制到刚刚创建的目录：</p>
+<pre><code class="hljs taggerscript">xcopy /h W:<span class="hljs-symbol">\W</span>indows<span class="hljs-symbol">\S</span>ystem32<span class="hljs-symbol">\R</span>ecovery<span class="hljs-symbol">\W</span>inre.wim R:<span class="hljs-symbol">\R</span>ecovery<span class="hljs-symbol">\W</span>indowsRE</code></pre>
+<p>最后在操作系统上注册 Windows RE 启动路径：</p>
+<pre><code class="hljs taggerscript">W:<span class="hljs-symbol">\W</span>indows<span class="hljs-symbol">\S</span>ystem32<span class="hljs-symbol">\R</span>eagentc /setreimage /path R:<span class="hljs-symbol">\R</span>ecovery<span class="hljs-symbol">\W</span>indowsRE /target W:<span class="hljs-symbol">\W</span>indows</code></pre>
+<p>这样，操作系统安装的全部工作就大功告成了。</p>
+<hr>
+<h2 id="外篇：如何备份原有系统上的文件"><a href="#外篇：如何备份原有系统上的文件" class="headerlink" title="外篇：如何备份原有系统上的文件"></a>外篇：如何备份原有系统上的文件</h2><p>有些时候，我们可能需要对驱动器内原有的文件进行备份，以防止用户可能并不知道自己的文件并未完成备份。</p>
+<p>这同样可以使用 DISM 命令来完成。</p>
+<p><strong>请在开始前确认可移动驱动器是否有足够的存储空间。</strong></p>
+<pre><code class="hljs groovy">Dism <span class="hljs-regexp">/Capture-Image /</span><span class="hljs-attr">ImageFile:</span><span class="hljs-attr">D:</span>\Backup\Windows.wim <span class="hljs-regexp">/CaptureDir:W:\ /</span><span class="hljs-attr">Name:</span>MyBackup</code></pre>
+<blockquote>
+<p>命令参数解释：<br>/Capture-Image - 捕获镜像<br>/ImageFile - 指定生成的映像文件释放的路径。<br>/CaptureDir - 指定捕获路径。<br>/Name - 指定镜像名称（不能省略）。 </p>
+</blockquote>
+<p>备份过程需要一定时间，其耗时取决于用户文件数量和设备性能。</p>
+<p>等待镜像创建完成后，创建的镜像可使用例如 <a target="_blank" rel="noopener" href="https://apps.microsoft.com/store/detail/9N8G7TSCL18R">NanaZIP</a> 这一类的文件归档工具进行查看和导出。</p>
+<hr>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/what-is-dism">DISM Overview | Microsoft Docs</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/bare-metal-resetrecovery-enable-your-users-to-create-media-and-to-recover-hard-drive-space/">Bare metal reset/recovery: enable your users to create recovery media | Microsoft Docs</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/deploy-windows-re/">Deploy Windows RE | Microsoft Docs</a></p>
+</li>
+</ul>
+<p><strong>本文以<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/3.0/">CC BY-NC-SA 3.0</a>协议发布，转载请标注来源。</strong></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E8%BF%90%E7%BB%B4/">运维</a>
+                    
+                      <a class="hover-with-bg" href="/categories/%E8%BF%90%E7%BB%B4/%E8%A3%85%E6%9C%BA/">装机</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Windows/">Windows</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E8%BF%90%E7%BB%B4/">运维</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/">命令行</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E8%A3%85%E6%9C%BA/">装机</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%A4%87%E4%BB%BD/">备份</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用  <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="nofollow noopener noopener">CC BY-NC-SA 3.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/07/06/How-to-Optimize-Virtual-Disks-on-Hyper_V-VM-to-Save-Space/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Hyper-V虚拟机虚拟磁盘文件越用越大怎么办？</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/08/08/What-Do-You-Do-at-Windows-Defenfer-Steal-IO/">
+                        <span class="hidden-mobile">Defender偷IO时在做什么？有没有空？可以来拯救吗？</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <br/> Powered by  <a href="https://pages.github.com/" target="_blank" rel="nofollow noopener"><span>GitHub Pages</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "使用命令行全新安装Windows操作系统（附文件备份教程）&nbsp;",
+      ],
+      cursorChar: "|",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
