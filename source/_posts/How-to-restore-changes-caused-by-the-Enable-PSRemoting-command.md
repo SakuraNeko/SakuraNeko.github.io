@@ -5,7 +5,7 @@ categories:
 - [运维, 安全配置]
 tags: 
 - Windows
-- 运维
+- Ops
 - 安全配置
 - PowerShell
 ---
