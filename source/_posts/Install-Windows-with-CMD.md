@@ -4,14 +4,15 @@ date: 2022-06-15 21:30:30
 categories:
 - [运维, 装机]
 tags: 
+- 技术
+- Ops
 - Windows
-- 运维
-- 命令行
-- 装机
-- 备份
+- Command Line 
+- OS Install
+- Backup
 ---
 
-**关键词：** 运维、Windows、装机
+**关键词：** 运维、命令行、装机、备份
 
 **授权协议：** [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)，转载请标注来源
 
@@ -141,7 +142,9 @@ shrink minimum=1260
 ```
 > 按照微软的解释，恢复分区需要至少650MB以上的空间，但为了之后的升级扩展，本文设定为1260MB。
 11. 设定该分区为可读写的GPT分区：
+```
 gpt attributes=0x0000000000000000
+```
 12. 转换该分区文件系统格式为NTFS，并添加卷标“Windows OS”：
 ```
 format quick fs=ntfs label="Windows OS"
