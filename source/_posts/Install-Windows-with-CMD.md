@@ -75,7 +75,7 @@ Dism /Split-Image /ImageFile:D:\sources\install.wim /SWMFile:D:\sources\install.
 ```
 diskpart
 list disk
-select diek 0
+select disk 0
 convert gpt
 create partition efi size=260
 format quick fs=fat32 label="System"
@@ -107,7 +107,7 @@ list disk
 ```
 3. 选择需要操作的驱动器：
 ```
-select diek 0
+select disk 0
 ```
 > 注意：请根据列出的驱动器来选择需要处理的驱动器，可通过名称、容量来确定所应该操作的驱动器。
 4. 将被选择的驱动器引导方式转换为 GPT 方式：
